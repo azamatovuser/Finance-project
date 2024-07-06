@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% load static %}
+{% load custom_filters %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static './style.css' %}"/>
+    <title>Document</title>
+</head>
+<body>
+<nav>
+    <div class="container">
+        <div class="left">
+            <ul>
+                <li>
+                    <a href="#!">Меню</a>
+                </li>
+                <li><a href="">История покупок</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header>
+    <div class="container">
+        <div class="cards">
+            <div class="top">
+                <div class="residual">
+                    <div class="title">
+                        <p>Осталось</p>
+                    </div>
+                    <p class="sum">{{ left_money }} сум</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="salary">
+                    <div class="title">
+                        <p>Доход</p>
+                    </div>
+                    <div class="cardSums">
+                        <p class="sums">+ {{ balance }} сум</p>
+                        <p class="calendar">{{current_month}} 📆</p>
+                    </div>
+                </div>
+                <div class="cost">
+                    <div class="title">
+                        <p>Расход</p>
+                    </div>
+                    <div class="cardSums">
+                        <p class="sums">- {{ all_spendings }} сум</p>
+                        <p class="calendar">{{current_month}} 📆</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="title">
+                        <p>Относительно</p>
+                    </div>
+                    <div class="cardSums">
+                        <p class="sums" style="{% if not two_months < 0 %}color: #44cb49{% endif %}">
+                            {% if two_months > 0 %}
+                                + {{ two_months }} сум
+                            {% else %}
+                                - {{ two_months|abs_value }} сум
+                            {% endif %}
+                        </p>
+                        <p class="calendar">{{previous_month}} - {{current_month}} 📆</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="container">
+        <div class="title">
+            <p class="Purchases">Покупки</p>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="addCost">
+                <input type="text" name="title" placeholder="наименование товара" required/>
+                <input type="number" name="price" placeholder="цена продукта" required/>
+                <button type="submit">+</button>
+            </div>
+        </form>
+
+        <div class="costProducts">
+            <div class="costs">
+                <p class="month">Июнь</p>
+            </div>
+            {% for money in all_money %}
+            <div class="costsName">
+                <p class="productName">{{ money.title }}</p>
+                <p class="priceProduct">- {{ money.price }}</p>
+                <div class="imageIcons">
+                    <form method="post">
+                        {% csrf_token %}
+                        <button class="icon" type="submit" name="delete_id" value="{{ money.id }}">
+                            <img src="{% static './delete.png' %}" alt=""/>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+</body>
+</html>

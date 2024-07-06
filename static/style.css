@@ -1,0 +1,427 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto !important;
+  padding: 30px;
+}
+
+nav {
+  padding: 16px 32px;
+}
+ul {
+  display: flex;
+  gap: 100px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+/* cards */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header */
+
+header {
+  margin-top: 100px;
+}
+
+.top {
+}
+.residual {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 40px;
+}
+.residual {
+  padding: 30px;
+  background-color: white;
+  box-shadow: 3px 5px 3px 3px #6663ff17;
+  width: 420px;
+
+  height: 250px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.residual .title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #2797ff;
+  width: 182px;
+  padding: 20px;
+  color: white;
+  border-radius: 0 15px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.residual .title p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.residual .sum {
+  position: absolute;
+  bottom: 30px;
+  font-size: 40px;
+  color: #2797ff;
+  font-weight: 700;
+  /* font-weight: 500; */
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+}
+
+.salary {
+  padding: 30px;
+  background-color: white;
+  box-shadow: 3px 5px 3px 3px #6663ff17;
+  width: 295px;
+
+  height: 320px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.salary .title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #2797ff;
+  width: 182px;
+  padding: 20px;
+  color: white;
+  border-radius: 0 15px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.salary .title p {
+  font-size: 18px;
+  font-weight: 700;
+}
+.cardSums {
+  position: absolute;
+  bottom: 30px;
+}
+
+.salary .sums {
+  color: #44cb49;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.salary .calendar {
+  margin-top: 10px;
+}
+
+.cost {
+  padding: 30px;
+  background-color: white;
+  box-shadow: 3px 5px 3px 3px #6663ff17;
+  width: 295px;
+  height: 320px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.cost .title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #2797ff;
+  width: 182px;
+  padding: 20px;
+  color: white;
+  border-radius: 0 15px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cost .title p {
+  font-size: 18px;
+  font-weight: 700;
+}
+.cardSums {
+  position: absolute;
+  bottom: 30px;
+}
+
+.cost .sums {
+  color: #df5151;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.cost .calendar {
+  margin-top: 10px;
+}
+
+.benefit {
+  padding: 30px;
+  background-color: white;
+  box-shadow: 3px 5px 3px 3px #6663ff17;
+  width: 295px;
+  height: 320px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.benefit .title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #2797ff;
+  width: 182px;
+  padding: 20px;
+  color: white;
+  border-radius: 0 15px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.benefit .title p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cardSums {
+  position: absolute;
+  bottom: 30px;
+}
+
+.benefit .sums {
+  color: #df5151;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.benefit .calendar {
+  margin-top: 10px;
+}
+
+section {
+  margin-top: 100px;
+}
+section .title {
+  display: flex;
+  column-gap: 24px;
+}
+
+section .title p {
+  font-size: 48px;
+  font-weight: 700;
+}
+.addCost {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.addCost input {
+  padding: 20px;
+  font-size: 16px;
+  width: 400px;
+  border: 1px solid #2797ff;
+  border-radius: 10px;
+  outline: none;
+}
+
+section .addCost button {
+  background: #2797ff;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.costs {
+  margin-top: 40px;
+  border-bottom: 2px solid #2797ff;
+  width: 400px;
+  padding-bottom: 15px;
+  font-size: 32px;
+}
+
+.costsName {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.costsName .productName {
+  font-size: 28px;
+  font-weight: 500;
+}
+.priceProduct {
+  color: #df5151;
+  font-size: 28px;
+}
+
+.imageIcons {
+  display: flex;
+  align-items: center;
+}
+
+.imageIcons {
+  display: flex;
+  column-gap: 30px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.btnAdd{
+border:none;
+background-color:transparent;
+}
+
+/* ################## */
+/* ################## */
+/* ################## */
+/* ################## */
+/* ################## */
+/* ################## */
+/* ################## */
+/* ################## */
+/* ################## */
+/* ################## */
+/* ################## */
+/* ################## */
+/* ################## */
+/* ################## */
+/* ################## */
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    max-width: 400px;
+  }
+
+  /* cards */
+  .cards {
+    gap: 20px;
+  }
+
+  /* Header */
+
+  header {
+    margin-top: 80px;
+  }
+
+  .top {
+  }
+  .residual {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+  .residual {
+    box-shadow: 1px 3px 1px 1px #6663ff17;
+    width: 370px;
+  }
+
+  .bottom {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 20px;
+  }
+
+  .salary {
+    box-shadow: 1px 3px 1px 1px #6663ff17;
+    width: 370px;
+    height: 250px;
+  }
+
+  .cardSums {
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .cost {
+    box-shadow: 1px 3px 1px 1px #6663ff17;
+    width: 370px;
+    height: 250px;
+  }
+
+  .benefit {
+    box-shadow: 1px 3px 1px 1px #6663ff17;
+    width: 370px;
+    height: 250px;
+  }
+
+  section {
+    margin-top: 80px;
+  }
+
+  section .title p {
+    font-size: 24px;
+  }
+  .addCost {
+    margin-top: 40px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .addCost input {
+    width: 370px;
+  }
+
+  section .addCost button {
+    width: 370px;
+  }
+
+  .costs {
+    width: 370px;
+    font-size: 18px;
+  }
+
+  .costsName {
+    width: 370px;
+    margin-top: 20px;
+  }
+  .costsName .productName {
+    font-size: 14px;
+  }
+  .priceProduct {
+    font-size: 14px;
+  }
+
+  .imageIcons {
+    display: flex;
+    column-gap: 10px;
+  }
+  .imageIcons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon {
+    cursor: pointer;
+  }
+}
